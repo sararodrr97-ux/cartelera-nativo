@@ -1,0 +1,8 @@
+/*
+Bloque de código que elimina los estilos por defecto de los navegadores
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
