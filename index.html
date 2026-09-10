@@ -1,34 +1,65 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cartelera</title>
-    <link rel="stylesheet" href="css/main.css" />
-  </head>
-  <body>
 
-    <!-- cabecera -->
-    <header class="cabecera">
-      <div class="contenido-cabecera">
-        <h1 class="cabecera-titulo">Cartelera</h1>
-        <p class="cabecera-texto">Tu catálogo de cine</p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cartelera</title>
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+
+  <!-- cabecera -->
+  <header class="cabecera">
+    <div class="contenido-cabecera">
+      <h1 class="cabecera-titulo">Cartelera</h1>
+      <p class="cabecera-texto">Tu catálogo de cine</p>
+    </div>
+  </header>
+
+  <main class="principal">
+
+    <section class="filtros" aria-label="Filtros y ordenación">
+      <div class="listado">
+        <label for="filtro-genero" class="listado-etiqueta">Filtrar por género</label>
+        <select id="filtro-genero" class="listado-selector">
+          <option value="todos">Todos los géneros</option>
+          <option value="terror">Terror</option>
+          <option value="accion">Acción</option>
+          <option value="comedia">Comedia</option>
+          <option value="thriller">Thriller</option>
+          <option value="drama">Drama</option>
+          <option value="ciencia-ficcion">Ciencia Ficción</option>
+        </select>
       </div>
-    </header>
 
-    <main class="principal">
+      <div class="listado">
+        <label for="orden-año" class="listado-etiqueta">Ordenar por año</label>
+        <select id="orden-año" class="listado-selector">
+          <option value="ninguno">Sin ordenar</option>
+          <option value="asc">Más antiguas primero</option>
+          <option value="desc">Más recientes primero</option>
+        </select>
+      </div>
 
-      <!-- Catálogo de peliculas -->
-      <section class="catalogo" id="catalogo" aria-label="Catálogo de películas">
-      </section>
+      <!-- Contador de resultados visibles -->
+      <span class="contador-peliculas" id="contador-peliculas"></span>
+    </section>
 
-    </main>
 
-    <!-- Pie de página -->
-    <footer class="pie">
-      <p>Cartelera &copy; 2026</p>
-    </footer>
+    <!-- Catálogo de peliculas -->
+    <section class="catalogo" id="catalogo" aria-label="Catálogo de películas">
+    </section>
 
-    <script src="js/main.js"></script>
-  </body>
+  </main>
+
+  <!-- Pie de página -->
+  <footer class="pie">
+    <p>Cartelera &copy; 2026</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+
 </html>
